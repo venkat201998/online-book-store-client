@@ -1,0 +1,24 @@
+DATABASE='mongodb+srv://venkat:gnei96mh1tMgpyTQ@nodeapi.f4z2w.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
+PORT=8000
+
+CLOUDINARY_CLOUD_NAME=dq1rujxem
+CLOUDINARY_API_KEY=794621566461542
+CLOUDINARY_API_SECRET=yVY-jK3VGknhRCQmVVs10UQ8PXA
+
+STRIPE_SECRET=sk_test_51IfP2gSD87tQsqVrNnwkRRAThEG2SWxY5x57u1Sl2gEjUlJfXUWqmsWK0J78IOEA45Wwb8tcSkmhecZy6ZfBpuk300d04ZIiKA
+
+REACT_APP_REGISTER_REDIRECT_URL='http://localhost:3000/register/complete'
+REACT_APP_FORGOT_PASSWORD_REDIRECT="http://localhost:3000/login"
+REACT_APP_API='http://localhost:8000/api'
+
+REACT_APP_STRIPE_KEY=pk_test_51IfP2gSD87tQsqVrRNTRREL2q2ru1NcHHIfQxcnLNRrAvqQtT8cyUJ91Fn61B7yBOedq9WGViDxmE0lMre4zZpQf00FpXM2Wpb
+
+
+
+
+
+Client .env
+Server .env
+Server Config
+Server firebase
+Client firebase
