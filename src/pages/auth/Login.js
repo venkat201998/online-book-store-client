@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { auth, googleAuthProvider } from "../../firebase";
+import { signInWithEmailAndPassword } from "firebase/auth";
 import { toast } from "react-toastify";
 import { Button } from "antd";
 import { MailOutlined, GoogleOutlined } from "@ant-design/icons";
@@ -47,7 +48,7 @@ const Login = ({ history }) => {
     setLoading(true);
     // console.table(email, password);
     try {
-      const result = await auth.signInWithEmailAndPassword(email, password);
+      const result = await signInWithEmailAndPassword(auth, email, password);
       // console.log(result);
       const { user } = result;
       const idTokenResult = await user.getIdTokenResult();

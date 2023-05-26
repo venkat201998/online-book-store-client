@@ -34,6 +34,7 @@ import CreateCouponPage from "./pages/admin/coupon/CreateCouponPage";
 import Payment from "./pages/Payment";
 
 import { auth } from "./firebase";
+import { onAuthStateChanged } from "firebase/auth";
 import { useDispatch } from "react-redux";
 import { currentUser } from "./functions/auth";
 import { getUserDummyCart } from "./functions/user";
@@ -43,7 +44,7 @@ const App = () => {
 
   // to check firebase auth state
   useEffect(() => {
-    const unsubscribe = auth.onAuthStateChanged(async (user) => {
+    const unsubscribe = onAuthStateChanged(auth, async (user) => {
       if (user) {
         const idTokenResult = await user.getIdTokenResult();
         // console.log("user", user);

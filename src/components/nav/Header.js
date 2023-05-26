@@ -10,7 +10,8 @@ import {
   ShoppingCartOutlined,
 } from "@ant-design/icons";
 import { Link } from "react-router-dom";
-import firebase from "firebase";
+import { auth } from '../../firebase'
+import { signOut } from "firebase/auth";
 import { useDispatch, useSelector } from "react-redux";
 import { useHistory } from "react-router-dom";
 import Search from "../forms/Search";
@@ -31,7 +32,7 @@ const Header = () => {
   };
 
   const logout = () => {
-    firebase.auth().signOut();
+    signOut(auth);
     dispatch({
       type: "LOGOUT",
       payload: null,
